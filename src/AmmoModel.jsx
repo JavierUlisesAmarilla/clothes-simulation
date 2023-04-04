@@ -4,12 +4,12 @@ import React from 'react'
 import {Sphere, useGLTF} from '@react-three/drei'
 import {SoftBodyType, useSoftBody} from 'use-ammojs'
 import {useThree} from 'react-three-fiber'
-import {customDebug} from './utils/custom.debug'
+import {MODEL_SCALE} from './utils/constants'
 
 
 export const AmmoModel = () => {
   const three = useThree()
-  const gltf = useGLTF('./Henri/Henri.gltf')
+  const gltf = useGLTF('./Henri/Pant.gltf')
   const [ref] = useSoftBody({
     type: SoftBodyType.TRIMESH,
     pressure: 20,
@@ -17,8 +17,8 @@ export const AmmoModel = () => {
 
   if (isFirstRender) {
     isFirstRender = false
+    gltf.scene.scale.set(MODEL_SCALE, MODEL_SCALE, MODEL_SCALE)
     three.scene.add(gltf.scene)
-    customDebug().log('AmmoModel: three.scene: ', three.scene)
   }
 
   return (
