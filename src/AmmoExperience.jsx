@@ -2,15 +2,12 @@
 import React, {Suspense} from 'react'
 import {OrbitControls} from '@react-three/drei'
 import {Perf} from 'r3f-perf'
-import {Henri} from './Henri.jsx'
-import {TShirt} from './TShirt.jsx'
-import {Pant} from './Pant.jsx'
-import {TankTop} from './TankTop.jsx'
-import {Debug, Physics} from '@react-three/rapier'
-import {Ground} from './Ground.jsx'
+import {Physics} from 'use-ammojs'
+import {AmmoGround} from './AmmoGround.jsx'
+import {AmmoSoftBall} from './AmmoSoftBall.jsx'
 
 
-export const Experience = () => {
+export const AmmoExperience = () => {
   return (
     <>
       <Perf position="top-left"/>
@@ -28,18 +25,10 @@ export const Experience = () => {
       <axesHelper args={[5]}/>
 
       <Suspense>
-        <Physics colliders='hull'>
-          <Ground/>
+        <Physics drawDebug={true}>
+          <AmmoGround/>
 
-          <Henri/>
-
-          <TShirt/>
-
-          <Pant/>
-
-          <TankTop/>
-
-          <Debug/>
+          <AmmoSoftBall/>
         </Physics>
       </Suspense>
     </>

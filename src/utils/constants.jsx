@@ -5,3 +5,5 @@ export const GROUND_SIZE = 10
 export const DEFAULT_LINEAR_DAMPING = 10
 
 export const DEFAULT_ANGULAR_DAMPING = 10
+
+export const USE_AMMO = true

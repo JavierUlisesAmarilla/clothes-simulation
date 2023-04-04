@@ -35,7 +35,6 @@ export const TShirt = () => {
   return visibleTShirt ? (
     <RigidBody
       ref={rigidBody}
-      colliders='trimesh'
       position={[0, 0, 0]}
       enabledRotations={[false, true, false]}
       linearDamping={DEFAULT_LINEAR_DAMPING}

@@ -3,6 +3,8 @@ import './index.css'
 import ReactDOM from 'react-dom/client'
 import {Canvas} from '@react-three/fiber'
 import {Experience} from './Experience.jsx'
+import {USE_AMMO} from './utils/constants'
+import {AmmoExperience} from './AmmoExperience'
 
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
@@ -18,6 +20,6 @@ root.render(
         position: [- 4, 3, 6],
       }}
     >
-      <Experience/>
+      {USE_AMMO ? <AmmoExperience/> : <Experience/>}
     </Canvas>,
 )
