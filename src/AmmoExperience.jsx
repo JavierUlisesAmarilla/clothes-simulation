@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unknown-property */
 import React, {Suspense} from 'react'
 import {OrbitControls} from '@react-three/drei'
@@ -5,7 +6,6 @@ import {Perf} from 'r3f-perf'
 import {Physics} from 'use-ammojs'
 import {AmmoGround} from './AmmoGround.jsx'
 import {AmmoSoftBall} from './AmmoSoftBall.jsx'
-// eslint-disable-next-line no-unused-vars
 import {AmmoModel} from './AmmoModel.jsx'
 
 
@@ -30,9 +30,9 @@ export const AmmoExperience = () => {
         <Physics drawDebug={true}>
           <AmmoGround/>
 
-          <AmmoSoftBall/>
+          {/* <AmmoSoftBall/> */}
 
-          {/* <AmmoModel/> */}
+          <AmmoModel/>
         </Physics>
       </Suspense>
     </>

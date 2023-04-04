@@ -5,10 +5,10 @@ import {SoftBodyType, useSoftBody} from 'use-ammojs'
 
 
 export const AmmoSoftBall = () => {
-  const [ref] = useSoftBody(() => ({
+  const [ref] = useSoftBody({
     type: SoftBodyType.TRIMESH,
     pressure: 20,
-  }))
+  })
 
   return (
     <Sphere args={[0.5, 64, 64]} ref={ref} castShadow>
