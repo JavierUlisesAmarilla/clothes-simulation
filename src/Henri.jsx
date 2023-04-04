@@ -1,12 +1,11 @@
 /* eslint-disable react/no-unknown-property */
 import React, {useRef} from 'react'
-import {Shape, useGLTF} from '@react-three/drei'
+import {useAnimations, useGLTF} from '@react-three/drei'
 import {useControls} from 'leva'
 import {useFrame} from 'react-three-fiber'
-import {MODEL_SCALE} from './utils/constants'
+import {RigidBody} from '@react-three/rapier'
+import {DEFAULT_ANGULAR_DAMPING, DEFAULT_LINEAR_DAMPING, MODEL_SCALE} from './utils/constants'
 import {customDebug} from './utils/debug'
-import {BodyType, ShapeType, useRigidBody} from 'use-ammojs'
-import {modelToSingleMesh} from './utils/common'
 
 
 export const Henri = () => {
@@ -16,18 +15,11 @@ export const Henri = () => {
   })
   const gltf = useGLTF('./Henri/Henri.gltf')
   customDebug().log('Henri: gltf.scene: ', gltf.scene)
-  const gltfMesh = modelToSingleMesh(gltf)
-  customDebug().log('Henri: gltfMesh: ', gltfMesh)
+  const gltfRef = useRef()
+  // eslint-disable-next-line no-unused-vars
+  const {actions} = useAnimations(gltf.scene.animations, gltfRef)
   const rotationRef = useRef(0)
-
-  const [ref] = useRigidBody(
-      () => ({
-        shapeType: ShapeType.MESH,
-        bodyType: BodyType.STATIC,
-      }),
-      gltfMesh,
-  )
-  customDebug().log('Henri: ref: ', ref, gltfMesh)
+  const rigidBody = useRef(null)
 
   useFrame((state, delta) => {
     // Calculate the rotation angle based on the rotationY control
@@ -41,12 +33,21 @@ export const Henri = () => {
   })
 
   return visible ? (
-    <Shape
-      ref={ref}
-      scale={MODEL_SCALE}
+    <RigidBody
+      ref={rigidBody}
+      colliders='trimesh'
+      position={[0, 0, 0]}
+      enabledRotations={[false, true, false]}
+      linearDamping={DEFAULT_LINEAR_DAMPING}
+      angularDamping={DEFAULT_ANGULAR_DAMPING}
     >
-      <meshPhysicalMaterial attach="material" color="red"/>
-    </Shape>
+      <primitive
+        ref={gltfRef}
+        object={gltf.scene}
+        scale={MODEL_SCALE}
+        castShadow
+      />
+    </RigidBody>
   ) : null
 }
 

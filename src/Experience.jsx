@@ -33,7 +33,7 @@ export const Experience = () => {
         <Physics drawDebug={true}>
           <Ground/>
 
-          <Henri/>
+          {/* <Henri/> */}
 
           {/* <TShirt/> */}
 
@@ -41,7 +41,7 @@ export const Experience = () => {
 
           {/* <TankTop/> */}
 
-          {/* <SoftBall/> */}
+          <SoftBall/>
         </Physics>
       </Suspense>
     </>

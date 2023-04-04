@@ -7,7 +7,7 @@ import {SoftBodyType, useSoftBody} from 'use-ammojs'
 export const SoftBall = () => {
   const [ref] = useSoftBody(() => ({
     type: SoftBodyType.TRIMESH,
-    pressure: 100,
+    pressure: 5,
   }))
 
   return (
