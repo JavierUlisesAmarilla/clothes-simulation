@@ -3,7 +3,7 @@ import React, {useRef} from 'react'
 import {useAnimations, useGLTF} from '@react-three/drei'
 import {useControls} from 'leva'
 import {useFrame} from 'react-three-fiber'
-import {customDebug} from './utils/debug'
+import {customDebug} from './utils/custom.debug'
 import {RigidBody} from '@react-three/rapier'
 import {DEFAULT_ANGULAR_DAMPING, DEFAULT_LINEAR_DAMPING, MODEL_SCALE} from './utils/constants'
 
