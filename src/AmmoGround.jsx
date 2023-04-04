@@ -5,7 +5,7 @@ import {GROUND_SIZE} from './utils/constants'
 import {ShapeType, useRigidBody} from 'use-ammojs'
 
 
-export const Ground = () => {
+export const AmmoGround = () => {
   const [ref] = useRigidBody(() => ({
     shapeType: ShapeType.BOX,
     mass: 0,

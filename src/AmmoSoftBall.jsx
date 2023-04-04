@@ -4,7 +4,7 @@ import {Sphere} from '@react-three/drei'
 import {SoftBodyType, useSoftBody} from 'use-ammojs'
 
 
-export const SoftBall = () => {
+export const AmmoSoftBall = () => {
   const [ref] = useSoftBody(() => ({
     type: SoftBodyType.TRIMESH,
     pressure: 5,

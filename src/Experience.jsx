@@ -8,8 +8,8 @@ import {TShirt} from './TShirt.jsx'
 import {Pant} from './Pant.jsx'
 import {TankTop} from './TankTop.jsx'
 import {Physics} from 'use-ammojs'
-import {Ground} from './Ground.jsx'
-import {SoftBall} from './SoftBall.jsx'
+import {AmmoGround} from './AmmoGround.jsx'
+import {AmmoSoftBall} from './AmmoSoftBall.jsx'
 
 
 export const Experience = () => {
@@ -31,7 +31,9 @@ export const Experience = () => {
 
       <Suspense>
         <Physics drawDebug={true}>
-          <Ground/>
+          <AmmoGround/>
+
+          <AmmoSoftBall/>
 
           {/* <Henri/> */}
 
@@ -40,8 +42,6 @@ export const Experience = () => {
           {/* <Pant/> */}
 
           {/* <TankTop/> */}
-
-          <SoftBall/>
         </Physics>
       </Suspense>
     </>
