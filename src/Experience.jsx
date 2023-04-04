@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unknown-property */
 import React, {Suspense} from 'react'
 import {OrbitControls} from '@react-three/drei'
@@ -28,16 +29,16 @@ export const Experience = () => {
       <axesHelper args={[5]}/>
 
       <Suspense>
-        <Physics colliders='hull'>
+        <Physics colliders='trimesh'>
           <Ground/>
 
           <Henri/>
 
           <TShirt/>
 
-          <Pant/>
+          {/* <Pant/> */}
 
-          <TankTop/>
+          {/* <TankTop/> */}
 
           <Debug/>
         </Physics>
