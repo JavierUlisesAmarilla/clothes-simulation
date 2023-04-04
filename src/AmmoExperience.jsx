@@ -5,6 +5,8 @@ import {Perf} from 'r3f-perf'
 import {Physics} from 'use-ammojs'
 import {AmmoGround} from './AmmoGround.jsx'
 import {AmmoSoftBall} from './AmmoSoftBall.jsx'
+// eslint-disable-next-line no-unused-vars
+import {AmmoModel} from './AmmoModel.jsx'
 
 
 export const AmmoExperience = () => {
@@ -29,6 +31,8 @@ export const AmmoExperience = () => {
           <AmmoGround/>
 
           <AmmoSoftBall/>
+
+          {/* <AmmoModel/> */}
         </Physics>
       </Suspense>
     </>
