@@ -49,5 +49,3 @@ export const Pant = () => {
     </RigidBody>
   ) : null
 }
-
-useGLTF.preload('./Henri/Pant.gltf')

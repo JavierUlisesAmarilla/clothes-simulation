@@ -49,5 +49,3 @@ export const TankTop = () => {
     </RigidBody>
   ) : null
 }
-
-useGLTF.preload('./Henri/Debardeur.gltf')

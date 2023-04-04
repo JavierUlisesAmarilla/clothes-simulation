@@ -49,5 +49,3 @@ export const TShirt = () => {
     </RigidBody>
   ) : null
 }
-
-useGLTF.preload('./Henri/TShirt.gltf')
