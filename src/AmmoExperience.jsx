@@ -29,7 +29,7 @@ export const AmmoExperience = () => {
       {/* <axesHelper args={[5]}/> */}
 
       <Suspense>
-        <Physics drawDebug={true}>
+        <Physics drawDebug={false}>
           <AmmoGround/>
 
           {/* <AmmoSoftBall/> */}
@@ -38,9 +38,9 @@ export const AmmoExperience = () => {
 
           {/* <AmmoBall/> */}
 
-          <AmmoCustomBall/>
+          {/* <AmmoCustomBall/> */}
 
-          {/* <AmmoModel/> */}
+          <AmmoModel/>
         </Physics>
       </Suspense>
     </>
