@@ -10,7 +10,6 @@ export const Ground = () => {
   return (
     <RigidBody lockTranslations={true}>
       <Plane
-        receiveShadow
         position={[0, -0.000001, 0]}
         rotation={[- Math.PI * 0.5, 0, 0]}
         scale={GROUND_SIZE}

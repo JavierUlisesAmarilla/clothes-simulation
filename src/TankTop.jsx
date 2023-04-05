@@ -44,7 +44,6 @@ export const TankTop = () => {
         ref={gltfRef}
         object={gltf.scene}
         scale={MODEL_SCALE}
-        castShadow
       />
     </RigidBody>
   ) : null

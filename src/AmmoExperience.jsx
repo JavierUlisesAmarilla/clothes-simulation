@@ -9,6 +9,7 @@ import {AmmoSoftBall} from './AmmoSoftBall.jsx'
 import {AmmoCustomSoftBall} from './AmmoCustomSoftBall.jsx'
 import {AmmoModel} from './AmmoModel.jsx'
 import {AmmoCustomBall} from './AmmoCustomBall.jsx'
+import {AmmoBall} from './AmmoBall.jsx'
 
 
 export const AmmoExperience = () => {
@@ -19,7 +20,6 @@ export const AmmoExperience = () => {
       <OrbitControls makeDefault/>
 
       <directionalLight
-        castShadow
         position={[1, 2, 3]}
         intensity={1.5}
         shadow-normalBias={0.04}
@@ -36,7 +36,9 @@ export const AmmoExperience = () => {
 
           {/* <AmmoCustomSoftBall/> */}
 
-          <AmmoCustomBall/>
+          <AmmoBall/>
+
+          {/* <AmmoCustomBall/> */}
 
           {/* <AmmoModel/> */}
         </Physics>
