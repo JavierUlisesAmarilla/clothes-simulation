@@ -1,5 +1,5 @@
 import {useEffect} from 'react'
-import {useThree} from 'react-three-fiber'
+import {useThree} from '@react-three/fiber'
 import {SoftBodyType, useAmmoPhysicsContext} from 'use-ammojs'
 import {MathUtils, Mesh, MeshStandardMaterial, SphereGeometry} from 'three'
 
