@@ -1,6 +1,6 @@
 import {useEffect} from 'react'
 import {useThree} from 'react-three-fiber'
-import {BodyType, ShapeType, useAmmoPhysicsContext} from 'use-ammojs'
+import {ShapeType, useAmmoPhysicsContext} from 'use-ammojs'
 import {MathUtils, Mesh, MeshStandardMaterial, SphereGeometry} from 'three'
 
 
@@ -14,6 +14,7 @@ export const AmmoCustomBall = () => {
         new MeshStandardMaterial({color: 'red'}),
     )
     three.scene.add(sphereMesh)
+    sphereMesh.updateMatrixWorld()
     const newUUID = MathUtils.generateUUID()
     apc.addRigidBody(
         newUUID,
@@ -21,11 +22,8 @@ export const AmmoCustomBall = () => {
         {
           meshToUse: sphereMesh,
           shapeConfig: {
-            type: ShapeType.MESH,
+            type: ShapeType.SPHERE,
           },
-        },
-        {
-          type: BodyType.STATIC,
         },
     )
   }, [apc, three.scene])

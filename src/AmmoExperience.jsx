@@ -36,9 +36,9 @@ export const AmmoExperience = () => {
 
           {/* <AmmoCustomSoftBall/> */}
 
-          <AmmoBall/>
+          {/* <AmmoBall/> */}
 
-          {/* <AmmoCustomBall/> */}
+          <AmmoCustomBall/>
 
           {/* <AmmoModel/> */}
         </Physics>
