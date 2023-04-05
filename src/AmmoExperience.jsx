@@ -8,6 +8,7 @@ import {AmmoGround} from './AmmoGround.jsx'
 import {AmmoSoftBall} from './AmmoSoftBall.jsx'
 import {AmmoCustomSoftBall} from './AmmoCustomSoftBall.jsx'
 import {AmmoModel} from './AmmoModel.jsx'
+import {AmmoCustomBall} from './AmmoCustomBall.jsx'
 
 
 export const AmmoExperience = () => {
@@ -25,7 +26,7 @@ export const AmmoExperience = () => {
       />
       <ambientLight intensity={0.5}/>
 
-      <axesHelper args={[5]}/>
+      {/* <axesHelper args={[5]}/> */}
 
       <Suspense>
         <Physics drawDebug={true}>
@@ -33,7 +34,9 @@ export const AmmoExperience = () => {
 
           {/* <AmmoSoftBall/> */}
 
-          <AmmoCustomSoftBall/>
+          {/* <AmmoCustomSoftBall/> */}
+
+          <AmmoCustomBall/>
 
           {/* <AmmoModel/> */}
         </Physics>
