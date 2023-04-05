@@ -3,18 +3,18 @@ import React, {useRef} from 'react'
 import {useAnimations, useGLTF} from '@react-three/drei'
 import {useControls} from 'leva'
 import {useFrame} from '@react-three/fiber'
-import {customDebug} from './utils/custom.debug'
 import {RigidBody} from '@react-three/rapier'
-import {DEFAULT_ANGULAR_DAMPING, DEFAULT_LINEAR_DAMPING, MODEL_SCALE} from './utils/constants'
+import {DEFAULT_ANGULAR_DAMPING, DEFAULT_LINEAR_DAMPING, MODEL_SCALE} from '../utils/constants'
+import {customDebug} from '../utils/custom.debug'
 
 
-export const TankTop = () => {
-  const {visibleTankTop, rotationY} = useControls({
-    visibleTankTop: {value: true, label: 'Show TankTop'},
+export const Henri = () => {
+  const {visible, rotationY} = useControls({
+    visible: {value: true, label: 'Show Henri'},
     rotationY: {value: 0, min: 0, max: 1, label: 'Rotation Y'},
   })
-  const gltf = useGLTF('./Henri/Debardeur.gltf')
-  customDebug().log('TankTop: gltf.scene: ', gltf.scene)
+  const gltf = useGLTF('./Henri/Henri.gltf')
+  customDebug().log('Henri: gltf.scene: ', gltf.scene)
   const gltfRef = useRef()
   // eslint-disable-next-line no-unused-vars
   const {actions} = useAnimations(gltf.scene.animations, gltfRef)
@@ -32,7 +32,7 @@ export const TankTop = () => {
     gltf.scene.rotation.y = rotationRef.current
   })
 
-  return visibleTankTop ? (
+  return visible ? (
     <RigidBody
       ref={rigidBody}
       position={[0, 0, 0]}

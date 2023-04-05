@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unknown-property */
 import React from 'react'
 import {Plane} from '@react-three/drei'
-import {GROUND_SIZE} from './utils/constants'
+import {GROUND_SIZE} from '../utils/constants'
 import {ShapeType, useRigidBody} from 'use-ammojs'
 import {DoubleSide} from 'three'
 

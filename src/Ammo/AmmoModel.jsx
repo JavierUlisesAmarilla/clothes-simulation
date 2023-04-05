@@ -3,9 +3,9 @@ import {MathUtils} from 'three'
 import {useGLTF} from '@react-three/drei'
 import {useThree} from '@react-three/fiber'
 import {SoftBodyType, useAmmoPhysicsContext} from 'use-ammojs'
-import {MODEL_SCALE} from './utils/constants'
-import {customDebug} from './utils/custom.debug'
-import {mergeModelMeshes} from './utils/common'
+import {MODEL_SCALE} from '../utils/constants'
+import {customDebug} from '../utils/custom.debug'
+import {mergeModelMeshes} from '../utils/common'
 
 
 export const AmmoModel = () => {

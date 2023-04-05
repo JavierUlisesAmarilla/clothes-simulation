@@ -2,9 +2,9 @@
 import './index.css'
 import ReactDOM from 'react-dom/client'
 import {Canvas} from '@react-three/fiber'
-import {Experience} from './Experience.jsx'
+import {Experience} from './Rapier/Experience.jsx'
 import {USE_AMMO} from './utils/constants'
-import {AmmoExperience} from './AmmoExperience'
+import {AmmoExperience} from './Ammo/AmmoExperience'
 
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))

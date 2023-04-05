@@ -3,18 +3,18 @@ import React, {useRef} from 'react'
 import {useAnimations, useGLTF} from '@react-three/drei'
 import {useControls} from 'leva'
 import {useFrame} from '@react-three/fiber'
+import {customDebug} from '../utils/custom.debug'
 import {RigidBody} from '@react-three/rapier'
-import {DEFAULT_ANGULAR_DAMPING, DEFAULT_LINEAR_DAMPING, MODEL_SCALE} from './utils/constants'
-import {customDebug} from './utils/custom.debug'
+import {DEFAULT_ANGULAR_DAMPING, DEFAULT_LINEAR_DAMPING, MODEL_SCALE} from '../utils/constants'
 
 
-export const TShirt = () => {
-  const {visibleTShirt, rotationY} = useControls({
-    visibleTShirt: {value: true, label: 'Show T-Shirt'},
+export const Pant = () => {
+  const {visiblePant, rotationY} = useControls({
+    visiblePant: {value: true, label: 'Show Pant'},
     rotationY: {value: 0, min: 0, max: 1, label: 'Rotation Y'},
   })
-  const gltf = useGLTF('./Henri/TShirt.gltf')
-  customDebug().log('TShirt: gltf.scene: ', gltf.scene)
+  const gltf = useGLTF('./Henri/Pant.gltf')
+  customDebug().log('Pant: gltf.scene: ', gltf.scene)
   const gltfRef = useRef()
   // eslint-disable-next-line no-unused-vars
   const {actions} = useAnimations(gltf.scene.animations, gltfRef)
@@ -32,7 +32,7 @@ export const TShirt = () => {
     gltf.scene.rotation.y = rotationRef.current
   })
 
-  return visibleTShirt ? (
+  return visiblePant ? (
     <RigidBody
       ref={rigidBody}
       position={[0, 0, 0]}
