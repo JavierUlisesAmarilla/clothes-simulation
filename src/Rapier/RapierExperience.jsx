@@ -2,15 +2,15 @@
 import React, {Suspense} from 'react'
 import {OrbitControls} from '@react-three/drei'
 import {Perf} from 'r3f-perf'
-import {Henri} from './Henri.jsx'
-import {TShirt} from './TShirt.jsx'
-import {Pant} from './Pant.jsx'
-import {TankTop} from './TankTop.jsx'
+import {RapierHenri} from './RapierHenri.jsx'
+import {RapierTShirt} from './RapierTShirt.jsx'
+import {RapierPant} from './RapierPant.jsx'
+import {RapierTankTop} from './RapierTankTop.jsx'
 import {Debug, Physics} from '@react-three/rapier'
-import {Ground} from './Ground.jsx'
+import {RapierGround} from './RapierGround.jsx'
 
 
-export const Experience = () => {
+export const RapierExperience = () => {
   return (
     <>
       <Perf position="top-left"/>
@@ -28,15 +28,15 @@ export const Experience = () => {
 
       <Suspense>
         <Physics colliders='hull'>
-          <Ground/>
+          <RapierGround/>
 
-          <Henri/>
+          <RapierHenri/>
 
-          <TShirt/>
+          <RapierTShirt/>
 
-          <Pant/>
+          <RapierPant/>
 
-          <TankTop/>
+          <RapierTankTop/>
 
           <Debug/>
         </Physics>

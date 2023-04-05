@@ -6,7 +6,7 @@ import {GROUND_SIZE} from '../utils/constants'
 import {DoubleSide} from 'three'
 
 
-export const Ground = () => {
+export const RapierGround = () => {
   return (
     <RigidBody lockTranslations={true}>
       <Plane

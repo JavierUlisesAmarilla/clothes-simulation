@@ -8,7 +8,7 @@ import {DEFAULT_ANGULAR_DAMPING, DEFAULT_LINEAR_DAMPING, MODEL_SCALE} from '../u
 import {customDebug} from '../utils/custom.debug'
 
 
-export const Henri = () => {
+export const RapierHenri = () => {
   const {visible, rotationY} = useControls({
     visible: {value: true, label: 'Show Henri'},
     rotationY: {value: 0, min: 0, max: 1, label: 'Rotation Y'},

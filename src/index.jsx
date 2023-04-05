@@ -2,7 +2,7 @@
 import './index.css'
 import ReactDOM from 'react-dom/client'
 import {Canvas} from '@react-three/fiber'
-import {Experience} from './Rapier/Experience.jsx'
+import {RapierExperience} from './Rapier/RapierExperience.jsx'
 import {USE_AMMO} from './utils/constants'
 import {AmmoExperience} from './Ammo/AmmoExperience'
 
@@ -20,6 +20,6 @@ root.render(
         position: [- 4, 3, 6],
       }}
     >
-      {USE_AMMO ? <AmmoExperience/> : <Experience/>}
+      {USE_AMMO ? <AmmoExperience/> : <RapierExperience/>}
     </Canvas>,
 )

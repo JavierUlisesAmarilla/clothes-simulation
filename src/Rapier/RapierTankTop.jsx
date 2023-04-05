@@ -8,7 +8,7 @@ import {RigidBody} from '@react-three/rapier'
 import {DEFAULT_ANGULAR_DAMPING, DEFAULT_LINEAR_DAMPING, MODEL_SCALE} from '../utils/constants'
 
 
-export const TankTop = () => {
+export const RapierTankTop = () => {
   const {visibleTankTop, rotationY} = useControls({
     visibleTankTop: {value: true, label: 'Show TankTop'},
     rotationY: {value: 0, min: 0, max: 1, label: 'Rotation Y'},

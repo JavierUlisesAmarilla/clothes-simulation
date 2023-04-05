@@ -8,7 +8,7 @@ import {RigidBody} from '@react-three/rapier'
 import {DEFAULT_ANGULAR_DAMPING, DEFAULT_LINEAR_DAMPING, MODEL_SCALE} from '../utils/constants'
 
 
-export const Pant = () => {
+export const RapierPant = () => {
   const {visiblePant, rotationY} = useControls({
     visiblePant: {value: true, label: 'Show Pant'},
     rotationY: {value: 0, min: 0, max: 1, label: 'Rotation Y'},

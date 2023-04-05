@@ -8,7 +8,7 @@ import {DEFAULT_ANGULAR_DAMPING, DEFAULT_LINEAR_DAMPING, MODEL_SCALE} from '../u
 import {customDebug} from '../utils/custom.debug'
 
 
-export const TShirt = () => {
+export const RapierTShirt = () => {
   const {visibleTShirt, rotationY} = useControls({
     visibleTShirt: {value: true, label: 'Show T-Shirt'},
     rotationY: {value: 0, min: 0, max: 1, label: 'Rotation Y'},
