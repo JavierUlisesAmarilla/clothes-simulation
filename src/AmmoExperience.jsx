@@ -6,6 +6,7 @@ import {Perf} from 'r3f-perf'
 import {Physics} from 'use-ammojs'
 import {AmmoGround} from './AmmoGround.jsx'
 import {AmmoSoftBall} from './AmmoSoftBall.jsx'
+import {AmmoCustomSoftBall} from './AmmoCustomSoftBall.jsx'
 import {AmmoModel} from './AmmoModel.jsx'
 
 
@@ -32,7 +33,9 @@ export const AmmoExperience = () => {
 
           {/* <AmmoSoftBall/> */}
 
-          <AmmoModel/>
+          <AmmoCustomSoftBall/>
+
+          {/* <AmmoModel/> */}
         </Physics>
       </Suspense>
     </>
