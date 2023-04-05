@@ -8,8 +8,6 @@ export const AmmoBall = () => {
   const [ref] = useRigidBody(() => ({
     shapeType: ShapeType.SPHERE,
     mass: 1,
-    position: [0, 0, 0],
-    rotation: [0, 0, 0],
   }))
 
   return (

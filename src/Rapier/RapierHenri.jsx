@@ -35,7 +35,6 @@ export const RapierHenri = () => {
   return visible ? (
     <RigidBody
       ref={rigidBody}
-      position={[0, 0, 0]}
       enabledRotations={[false, true, false]}
       linearDamping={DEFAULT_LINEAR_DAMPING}
       angularDamping={DEFAULT_ANGULAR_DAMPING}
