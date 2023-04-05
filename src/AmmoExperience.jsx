@@ -32,15 +32,15 @@ export const AmmoExperience = () => {
         <Physics drawDebug={false}>
           <AmmoGround/>
 
-          <AmmoSoftBall/>
+          {/* <AmmoSoftBall/> */}
 
-          <AmmoCustomSoftBall/>
+          {/* <AmmoCustomSoftBall/> */}
 
           {/* <AmmoBall/> */}
 
           {/* <AmmoCustomBall/> */}
 
-          {/* <AmmoModel/> */}
+          <AmmoModel/>
         </Physics>
       </Suspense>
     </>
