@@ -13,6 +13,7 @@ export const AmmoCustomBall = () => {
         new SphereGeometry(0.5, 50, 50),
         new MeshStandardMaterial({color: 'red'}),
     )
+    sphereMesh.position.setY(2)
     three.scene.add(sphereMesh)
     const newUUID = MathUtils.generateUUID()
     apc.addRigidBody(
