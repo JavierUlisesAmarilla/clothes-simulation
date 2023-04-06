@@ -9,7 +9,7 @@ export const DEFAULT_LINEAR_DAMPING = 10
 
 export const DEFAULT_ANGULAR_DAMPING = 10
 
-export const USE_AMMO = true
+export const USE_AMMO = false
 
 export const DEFAULT_SOFTBODY_OPTIONS = {
   type: SoftBodyType.TRIMESH,
