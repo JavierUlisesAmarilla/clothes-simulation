@@ -1,5 +1,6 @@
 import {mergeBufferGeometries} from 'three/examples/jsm/utils/BufferGeometryUtils'
 import {Mesh} from 'three'
+import {customDebug} from './custom.debug'
 
 
 export const mergeModelMeshes = (model) => {
@@ -17,6 +18,8 @@ export const mergeModelMeshes = (model) => {
     }
   })
 
+  customDebug().log('common#mergeModelMeshes: bufferGeometries: ', bufferGeometries)
+  customDebug().log('common#mergeModelMeshes: materials: ', materials)
   const mergedBufferGeometry = mergeBufferGeometries(bufferGeometries, true)
   mergedBufferGeometry.computeBoundingBox()
   const mergedMesh = new Mesh(mergedBufferGeometry, materials)

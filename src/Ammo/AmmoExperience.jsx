@@ -7,13 +7,14 @@ import {Physics} from 'use-ammojs'
 import {AmmoGround} from './AmmoGround.jsx'
 import {AmmoSoftBall} from './AmmoSoftBall.jsx'
 import {AmmoCustomSoftBall} from './AmmoCustomSoftBall.jsx'
-import {AmmoModel} from './AmmoModel.jsx'
+import {AmmoSoftModel} from './AmmoSoftModel.jsx'
 import {AmmoCustomBall} from './AmmoCustomBall.jsx'
 import {AmmoBall} from './AmmoBall.jsx'
 import {AmmoPant} from './AmmoPant.jsx'
 import {AmmoTShirt} from './AmmoTShirt.jsx'
 import {AmmoTankTop} from './AmmoTankTop.jsx'
 import {AmmoHenri} from './AmmoHenri.jsx'
+import {AmmoModel} from './AmmoModel.jsx'
 
 
 export const AmmoExperience = () => {
@@ -36,21 +37,23 @@ export const AmmoExperience = () => {
         <Physics drawDebug={false}>
           <AmmoGround/>
 
-          {/* <AmmoSoftBall/> */}
-
-          {/* <AmmoCustomSoftBall/> */}
-
           {/* <AmmoBall/> */}
 
           {/* <AmmoCustomBall/> */}
 
+          {/* <AmmoSoftBall/> */}
+
+          {/* <AmmoCustomSoftBall/> */}
+
           {/* <AmmoModel/> */}
+
+          <AmmoSoftModel/>
 
           {/* <AmmoHenri/> */}
 
           {/* <AmmoTShirt/> */}
 
-          <AmmoPant/>
+          {/* <AmmoPant/> */}
 
           {/* <AmmoTankTop/> */}
         </Physics>

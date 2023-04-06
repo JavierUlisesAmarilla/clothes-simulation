@@ -2,28 +2,26 @@ import {useEffect} from 'react'
 import {MathUtils} from 'three'
 import {useGLTF} from '@react-three/drei'
 import {useThree} from '@react-three/fiber'
-import {SoftBodyType, useAmmoPhysicsContext} from 'use-ammojs'
-import {MODEL_SCALE} from '../utils/constants'
-import {customDebug} from '../utils/custom.debug'
-import {mergeModelMeshes} from '../utils/common'
+import {ShapeType, useAmmoPhysicsContext} from 'use-ammojs'
 
 
 export const AmmoModel = () => {
-  const gltf = useGLTF('./Henri/Pant.gltf')
+  const gltf = useGLTF('./models/soldier.glb')
   const three = useThree()
   const apc = useAmmoPhysicsContext()
 
   useEffect(() => {
-    customDebug().log('AmmoModel#useEffect: gltf.scene: ', gltf.scene)
-    const mergedMesh = mergeModelMeshes(gltf.scene)
-    mergedMesh.scale.set(MODEL_SCALE, MODEL_SCALE, MODEL_SCALE)
-    three.scene.add(mergedMesh)
+    gltf.scene.position.setY(1)
+    three.scene.add(gltf.scene)
     const newUUID = MathUtils.generateUUID()
-    apc.addSoftBody(
+    apc.addRigidBody(
         newUUID,
-        mergedMesh,
+        gltf.scene,
         {
-          type: SoftBodyType.TRIMESH,
+          meshToUse: gltf.scene,
+          shapeConfig: {
+            type: ShapeType.HULL,
+          },
         },
     )
   }, [apc, gltf.scene, three.scene])
