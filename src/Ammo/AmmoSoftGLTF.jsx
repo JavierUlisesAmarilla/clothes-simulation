@@ -6,6 +6,7 @@ import {useAmmoPhysicsContext} from 'use-ammojs'
 import {isVector3Arr, mergeModelMeshes} from '../utils/common'
 import {DEFAULT_SOFTBODY_OPTIONS} from '../utils/constants'
 import {assertDefined} from '../utils/custom.assert'
+import {customDebug} from '../utils/custom.debug'
 
 
 export const AmmoSoftGLTF = ({url, softBodyOptions, customMaterial, position, rotation, scale}) => {
@@ -15,6 +16,7 @@ export const AmmoSoftGLTF = ({url, softBodyOptions, customMaterial, position, ro
   const apc = useAmmoPhysicsContext()
 
   useEffect(() => {
+    customDebug().log('AmmoSoftGLTF#useEffect: gltf: ', gltf)
     const mergedMesh = mergeModelMeshes(gltf.scene, customMaterial)
     if (isVector3Arr(position)) {
       mergedMesh.position.set(position[0], position[1], position[2])
@@ -33,5 +35,5 @@ export const AmmoSoftGLTF = ({url, softBodyOptions, customMaterial, position, ro
         mergedMesh,
         options,
     )
-  }, [apc, customMaterial, gltf.scene, position, rotation, scale, softBodyOptions, three.scene])
+  }, [apc, customMaterial, gltf, gltf.scene, position, rotation, scale, softBodyOptions, three.scene])
 }

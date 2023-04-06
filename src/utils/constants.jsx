@@ -1,4 +1,5 @@
-import {SoftBodyType} from 'use-ammojs'
+/* eslint-disable no-unused-vars */
+import {BodyActivationState, SoftBodyType} from 'use-ammojs'
 
 
 export const MODEL_SCALE = 0.0015
@@ -13,11 +14,21 @@ export const USE_AMMO = true
 
 export const DEFAULT_SOFTBODY_OPTIONS = {
   type: SoftBodyType.TRIMESH,
+  // mass: 0,
+  // margin: 0,
+  // clusters: 0,
   viterations: 1,
   piterations: 1,
   friction: 0.1,
-  damping: 0.01,
-  pressure: 0.1,
-  linearStiffness: 0.9,
-  angularStiffness: 0.9,
+  damping: 0,
+  pressure: 0,
+  linearStiffness: 0.1,
+  angularStiffness: 0.1,
+  // volumeStiffness: 0,
+  // randomizeConstraints: false,
+  // activationState: BodyActivationState.ACTIVE_TAG,
+  // collisionFilterGroup: 0,
+  // collisionFilterMask: 0,
+  // collisionFlag: 0,
+  // anchors: [],
 }
