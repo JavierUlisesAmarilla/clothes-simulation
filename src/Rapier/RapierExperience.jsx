@@ -4,11 +4,11 @@ import React, {Suspense} from 'react'
 import {OrbitControls} from '@react-three/drei'
 import {Debug, Physics} from '@react-three/rapier'
 import {Perf} from 'r3f-perf'
-import {RapierGround} from './RapierGround.jsx'
-import {RapierHenri} from './RapierHenri.jsx'
-import {RapierTShirt} from './RapierTShirt.jsx'
-import {RapierPant} from './RapierPant.jsx'
-import {RapierTankTop} from './RapierTankTop.jsx'
+import {RapierGround} from './RapierGround'
+import {RapierHenri} from './RapierHenri'
+import {RapierTShirt} from './RapierTShirt'
+import {RapierPant} from './RapierPant'
+import {RapierTankTop} from './RapierTankTop'
 
 
 export const RapierExperience = () => {

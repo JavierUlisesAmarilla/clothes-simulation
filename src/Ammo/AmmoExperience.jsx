@@ -4,14 +4,14 @@ import React, {Suspense} from 'react'
 import {OrbitControls} from '@react-three/drei'
 import {Perf} from 'r3f-perf'
 import {Physics} from 'use-ammojs'
-import {AmmoGround} from './AmmoGround.jsx'
-import {AmmoBall} from './AmmoBall.jsx'
-import {AmmoSoftBall} from './AmmoSoftBall.jsx'
-import {AmmoCustomBall} from './AmmoCustomBall.jsx'
-import {AmmoCustomSoftBall} from './AmmoCustomSoftBall.jsx'
-import {AmmoGLTF} from './AmmoGLTF.jsx'
-import {AmmoSoftGLTF} from './AmmoSoftGLTF.jsx'
-import {MODEL_SCALE} from '../utils/constants.jsx'
+import {AmmoGround} from './AmmoGround'
+import {AmmoBall} from './AmmoBall'
+import {AmmoSoftBall} from './AmmoSoftBall'
+import {AmmoCustomBall} from './AmmoCustomBall'
+import {AmmoCustomSoftBall} from './AmmoCustomSoftBall'
+import {AmmoGLTF} from './AmmoGLTF'
+import {AmmoSoftGLTF} from './AmmoSoftGLTF'
+import {MODEL_SCALE} from '../utils/constants'
 
 
 export const AmmoExperience = () => {
@@ -31,7 +31,50 @@ export const AmmoExperience = () => {
       <axesHelper args={[5]}/>
 
       <Suspense>
-        <Physics drawDebug={false}>
+        <Physics
+          drawDebug={{
+            DrawWireframe: true,
+            DrawAabb: true,
+            DrawFeaturesText: true,
+            DrawContactPoints: true,
+            NoDeactivation: true,
+            NoHelpText: true,
+            DrawText: true,
+            ProfileTimings: true,
+            EnableSatComparison: true,
+            DisableBulletLCP: true,
+            EnableCCD: true,
+            DrawConstraints: true,
+            DrawConstraintLimits: true,
+            FastWireframe: true,
+            DrawNormals: true,
+            MAX_DEBUG_DRAW_MODE: true,
+          }}
+          drawDebugMode={{
+            DrawWireframe: true,
+            DrawAabb: true,
+            DrawFeaturesText: true,
+            DrawContactPoints: true,
+            NoDeactivation: true,
+            NoHelpText: true,
+            DrawText: true,
+            ProfileTimings: true,
+            EnableSatComparison: true,
+            DisableBulletLCP: true,
+            EnableCCD: true,
+            DrawConstraints: true,
+            DrawConstraintLimits: true,
+            FastWireframe: true,
+            DrawNormals: true,
+            MAX_DEBUG_DRAW_MODE: true,
+          }}
+          // gravity={[0, -9.8, 0]}
+          // epsilon={1}
+          // fixedTimeStep={1}
+          // maxSubSteps={1}
+          // solverIterations={1}
+          simulationSpeed={1}
+        >
           <AmmoGround/>
 
           {/* <AmmoBall/> */}

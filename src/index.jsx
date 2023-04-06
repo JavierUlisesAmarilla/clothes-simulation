@@ -2,7 +2,7 @@
 import './index.css'
 import ReactDOM from 'react-dom/client'
 import {Canvas} from '@react-three/fiber'
-import {RapierExperience} from './Rapier/RapierExperience.jsx'
+import {RapierExperience} from './Rapier/RapierExperience'
 import {USE_AMMO} from './utils/constants'
 import {AmmoExperience} from './Ammo/AmmoExperience'
 
