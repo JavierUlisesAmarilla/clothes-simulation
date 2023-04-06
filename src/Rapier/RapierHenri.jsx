@@ -5,16 +5,14 @@ import {useControls} from 'leva'
 import {useFrame} from '@react-three/fiber'
 import {RigidBody} from '@react-three/rapier'
 import {DEFAULT_ANGULAR_DAMPING, DEFAULT_LINEAR_DAMPING, MODEL_SCALE} from '../utils/constants'
-import {customDebug} from '../utils/custom.debug'
 
 
 export const RapierHenri = () => {
-  const {visible, rotationY} = useControls({
-    visible: {value: true, label: 'Show Henri'},
+  const {visibleHenri, rotationY} = useControls({
+    visibleHenri: {value: true, label: 'Show Henri'},
     rotationY: {value: 0, min: 0, max: 1, label: 'Rotation Y'},
   })
   const gltf = useGLTF('./Henri/Henri.gltf')
-  customDebug().log('Henri: gltf.scene: ', gltf.scene)
   const gltfRef = useRef()
   // eslint-disable-next-line no-unused-vars
   const {actions} = useAnimations(gltf.scene.animations, gltfRef)
@@ -22,17 +20,12 @@ export const RapierHenri = () => {
   const rigidBody = useRef(null)
 
   useFrame((state, delta) => {
-    // Calculate the rotation angle based on the rotationY control
     const rotationAngle = rotationY * Math.PI * 2
-
-    // Update the rotationRef value based on the rotation angle
     rotationRef.current += (rotationAngle - rotationRef.current) * 0.05
-
-    // Set the rotation value of the gltf.scene object
     gltf.scene.rotation.y = rotationRef.current
   })
 
-  return visible ? (
+  return visibleHenri ? (
     <RigidBody
       ref={rigidBody}
       enabledRotations={[false, true, false]}
