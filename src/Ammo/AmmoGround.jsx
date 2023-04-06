@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unknown-property */
 import React from 'react'
-import {Plane} from '@react-three/drei'
+import {Box} from '@react-three/drei'
 import {GROUND_SIZE} from '../utils/constants'
 import {ShapeType, useRigidBody} from 'use-ammojs'
 import {DoubleSide} from 'three'
@@ -11,12 +11,11 @@ export const AmmoGround = () => {
     shapeType: ShapeType.BOX,
     mass: 0,
     position: [0, -1, 0],
-    rotation: [- Math.PI * 0.5, 0, 0],
   }))
 
   return (
-    <Plane ref={ref} scale={GROUND_SIZE}>
+    <Box ref={ref} args={[GROUND_SIZE, 1, GROUND_SIZE]}>
       <meshStandardMaterial color="greenyellow" side={DoubleSide}/>
-    </Plane>
+    </Box>
   )
 }

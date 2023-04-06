@@ -13,8 +13,8 @@ export const USE_AMMO = true
 
 export const DEFAULT_SOFTBODY_OPTIONS = {
   type: SoftBodyType.TRIMESH,
-  viterations: 40,
-  piterations: 40,
+  viterations: 1,
+  piterations: 1,
   friction: 0.1,
   damping: 0.01,
   pressure: 0.1,
