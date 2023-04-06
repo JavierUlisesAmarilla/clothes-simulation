@@ -68,32 +68,28 @@ export const AmmoExperience = () => {
             DrawNormals: true,
             MAX_DEBUG_DRAW_MODE: true,
           }}
-          // gravity={[0, -9.8, 0]}
-          // epsilon={1}
-          // fixedTimeStep={1}
-          // maxSubSteps={1}
-          // solverIterations={1}
-          simulationSpeed={1}
+        // gravity={[0, -9.8, 0]}
+        // epsilon={1}
+        // fixedTimeStep={1}
+        // maxSubSteps={1}
+        // solverIterations={1}
+        // simulationSpeed={1}
         >
           <AmmoGround/>
-
           {/* <AmmoBall/> */}
-
           {/* <AmmoSoftBall/> */}
-
           {/* <AmmoCustomBall/> */}
-
           {/* <AmmoCustomSoftBall/> */}
-
           {/* <AmmoGLTF url='./models/soldier.glb' position={[0, 1, 0]}/> */}
-
           {/* <AmmoSoftGLTF url='./Henri/Henri.gltf' rotation={[Math.PI / 2, 0, 0]} scale={[MODEL_SCALE, MODEL_SCALE, MODEL_SCALE]}/> */}
-
           {/* <AmmoSoftGLTF url='./Henri/TShirt.gltf' rotation={[0, 0, 0]} scale={[MODEL_SCALE, MODEL_SCALE, MODEL_SCALE]}/> */}
-
-          <AmmoSoftGLTF url='./Henri/Pant.gltf' rotation={[0, 0, 0]} scale={[MODEL_SCALE, MODEL_SCALE, MODEL_SCALE]}/>
-
+          {/* <AmmoSoftGLTF url='./Henri/Pant.gltf' rotation={[0, 0, 0]} scale={[MODEL_SCALE, MODEL_SCALE, MODEL_SCALE]}/> */}
           {/* <AmmoSoftGLTF url='./Henri/Debardeur.gltf' rotation={[0, 0, 0]} scale={[MODEL_SCALE, MODEL_SCALE, MODEL_SCALE]}/> */}
+          <AmmoSoftGLTF url='./models/bathtub.glb' position={[-2, 0, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/>
+          <AmmoSoftGLTF url='./models/bench.glb' position={[-1, 1, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/>
+          <AmmoSoftGLTF url='./models/benchCushion.glb' position={[0, 2, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/>
+          <AmmoSoftGLTF url='./models/benchCushionLow.glb' position={[1, 3, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/>
+          <AmmoSoftGLTF url='./models/bookcaseOpen.glb' position={[2, 4, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/>
         </Physics>
       </Suspense>
     </>
