@@ -1,7 +1,8 @@
 import {useEffect} from 'react'
 import {useThree} from '@react-three/fiber'
-import {SoftBodyType, useAmmoPhysicsContext} from 'use-ammojs'
+import {useAmmoPhysicsContext} from 'use-ammojs'
 import {MathUtils, Mesh, MeshStandardMaterial, SphereGeometry} from 'three'
+import {DEFAULT_SOFTBODY_OPTIONS} from '../utils/constants'
 
 
 export const AmmoCustomSoftBall = () => {
@@ -19,16 +20,7 @@ export const AmmoCustomSoftBall = () => {
     apc.addSoftBody(
         newUUID,
         sphereMesh,
-        {
-          type: SoftBodyType.TRIMESH,
-          viterations: 40,
-          piterations: 40,
-          friction: 0.1,
-          damping: 0.01,
-          pressure: 20,
-          linearStiffness: 0.9,
-          angularStiffness: 0.9,
-        },
+        DEFAULT_SOFTBODY_OPTIONS,
     )
   }, [apc, three.scene])
 }
