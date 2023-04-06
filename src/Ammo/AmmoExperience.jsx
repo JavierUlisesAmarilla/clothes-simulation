@@ -47,13 +47,13 @@ export const AmmoExperience = () => {
 
           {/* <AmmoModel/> */}
 
-          {/* <AmmoSoftModel/> */}
+          <AmmoSoftModel/>
 
           {/* <AmmoHenri/> */}
 
           {/* <AmmoTShirt/> */}
 
-          <AmmoPant/>
+          {/* <AmmoPant/> */}
 
           {/* <AmmoTankTop/> */}
         </Physics>

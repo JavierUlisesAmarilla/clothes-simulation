@@ -13,9 +13,8 @@ export const AmmoSoftModel = () => {
   const apc = useAmmoPhysicsContext()
 
   useEffect(() => {
-    // eslint-disable-next-line no-unused-vars
     const customMaterial = new MeshStandardMaterial({color: 'green'})
-    const mergedMesh = mergeModelMeshes(gltf.scene)
+    const mergedMesh = mergeModelMeshes(gltf.scene, customMaterial)
     mergedMesh.scale.set(MODEL_SCALE, MODEL_SCALE, MODEL_SCALE)
     // mergedMesh.rotateX(Math.PI / 2)
     three.scene.add(mergedMesh)
