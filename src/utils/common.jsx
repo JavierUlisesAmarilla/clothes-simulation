@@ -33,3 +33,8 @@ export const mergeModelMeshes = (model, customMaterial) => {
   const mergedMesh = new Mesh(mergedBufferGeometry, material)
   return mergedMesh
 }
+
+
+export const isVector3Arr = (arr) => {
+  return Array.isArray(arr) && arr.length === 3
+}
