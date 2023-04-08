@@ -29,7 +29,10 @@ export const AmmoSoftGLTF = ({url, softBodyOptions, customMaterial, position, ro
     }
     three.scene.add(mergedMesh)
     const newUUID = MathUtils.generateUUID()
-    const options = softBodyOptions ? softBodyOptions : DEFAULT_SOFTBODY_OPTIONS
+    const options = {
+      ...DEFAULT_SOFTBODY_OPTIONS,
+      ...softBodyOptions,
+    }
     apc.addSoftBody(
         newUUID,
         mergedMesh,
