@@ -83,8 +83,9 @@ export const AmmoExperience = () => {
 
           {/* <AmmoSoftGLTF url='./Henri/Henri.gltf' position={[0, 0, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/> */}
           {/* <AmmoSoftGLTF url='./Henri/Henri_66803faces.gltf' position={[0, 0, 0]} rotation={[0, 0, 0]} scale={[0.0015, 0.0015, 0.0015]}/> */}
-          <AmmoSoftGLTF url='./Henri/Tshirt_40poly2.gltf' position={[0, 0, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/>
-          <AmmoSoftGLTF url='./Henri/Pant.gltf' position={[0, 0, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/>
+          <AmmoSoftGLTF url='./Henri/Henri_4500vertices.gltf' position={[0, 0, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/>
+          {/* <AmmoSoftGLTF url='./Henri/Tshirt_40poly2.gltf' position={[0, 0, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/> */}
+          {/* <AmmoSoftGLTF url='./Henri/Pant.gltf' position={[0, 0, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/> */}
           {/* <AmmoSoftGLTF url='./Henri/Shirt.gltf' position={[0, 0, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/> */}
 
           {/* Low poly models test */}

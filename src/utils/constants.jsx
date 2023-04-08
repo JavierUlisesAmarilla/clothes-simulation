@@ -16,7 +16,7 @@ export const DEFAULT_SOFTBODY_OPTIONS = {
   type: SoftBodyType.TRIMESH,
   // mass: 0,
   margin: 0.003,
-  clusters: 0.1,
+  clusters: 0,
   viterations: 1,
   piterations: 1,
   friction: 0.1,
