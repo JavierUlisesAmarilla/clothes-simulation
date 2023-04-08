@@ -2,7 +2,7 @@ import {useEffect} from 'react'
 import {MathUtils} from 'three'
 import {useGLTF} from '@react-three/drei'
 import {useThree} from '@react-three/fiber'
-import {ShapeType, useAmmoPhysicsContext} from 'use-ammojs'
+import {BodyType, ShapeType, useAmmoPhysicsContext} from 'use-ammojs'
 import {isVector3Arr} from '../utils/common'
 import {assertDefined} from '../utils/custom.assert'
 
@@ -33,6 +33,9 @@ export const AmmoGLTF = ({url, position, rotation, scale}) => {
           shapeConfig: {
             type: ShapeType.HULL,
           },
+        },
+        {
+          type: BodyType.STATIC,
         },
     )
   }, [apc, gltf.scene, position, rotation, scale, three.scene])
