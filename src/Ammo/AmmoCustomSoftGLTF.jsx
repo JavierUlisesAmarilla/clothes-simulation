@@ -9,14 +9,14 @@ import {assertDefined} from '../utils/custom.assert'
 import {customDebug} from '../utils/custom.debug'
 
 
-export const AmmoSoftGLTF = ({url, softBodyOptions, customMaterial, position, rotation, scale}) => {
+export const AmmoCustomSoftGLTF = ({url, softBodyOptions, customMaterial, position, rotation, scale}) => {
   assertDefined(url)
   const gltf = useGLTF(url)
   const three = useThree()
   const apc = useAmmoPhysicsContext()
 
   useEffect(() => {
-    customDebug().log('AmmoSoftGLTF#useEffect: gltf: ', gltf)
+    customDebug().log('AmmoCustomSoftGLTF#useEffect: gltf: ', gltf)
     const mergedMesh = mergeModelMeshes(gltf.scene, customMaterial)
     if (isVector3Arr(position)) {
       mergedMesh.position.set(position[0], position[1], position[2])

@@ -9,8 +9,8 @@ import {AmmoBall} from './AmmoBall'
 import {AmmoSoftBall} from './AmmoSoftBall'
 import {AmmoCustomBall} from './AmmoCustomBall'
 import {AmmoCustomSoftBall} from './AmmoCustomSoftBall'
-import {AmmoGLTF} from './AmmoGLTF'
-import {AmmoSoftGLTF} from './AmmoSoftGLTF'
+import {AmmoCustomGLTF} from './AmmoCustomGLTF'
+import {AmmoCustomSoftGLTF} from './AmmoCustomSoftGLTF'
 import {MODEL_SCALE} from '../utils/constants'
 
 
@@ -81,15 +81,15 @@ export const AmmoExperience = () => {
           {/* <AmmoCustomBall/> */}
           {/* <AmmoCustomSoftBall/> */}
 
-          <AmmoGLTF url='./Henri/Henri.gltf' position={[0, 0, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/>
+          <AmmoCustomGLTF url='./Henri/Henri.gltf' position={[0, 0, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/>
 
-          <AmmoSoftGLTF url='./Henri/Tshirt_40poly2.gltf' position={[0, 0, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/>
+          {/* <AmmoCustomSoftGLTF url='./Henri/Tshirt_40poly2.gltf' position={[0, 0, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/> */}
 
           {/* Low poly models test */}
-          {/* <AmmoSoftGLTF url='./models/bench.glb' position={[-1, 1, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/> */}
-          {/* <AmmoSoftGLTF url='./models/benchCushion.glb' position={[0, 2, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/> */}
-          {/* <AmmoSoftGLTF url='./models/benchCushionLow.glb' position={[1, 3, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/> */}
-          {/* <AmmoSoftGLTF url='./models/bookcaseOpen.glb' position={[2, 4, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/> */}
+          {/* <AmmoCustomSoftGLTF url='./models/bench.glb' position={[-1, 1, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/> */}
+          {/* <AmmoCustomSoftGLTF url='./models/benchCushion.glb' position={[0, 2, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/> */}
+          {/* <AmmoCustomSoftGLTF url='./models/benchCushionLow.glb' position={[1, 3, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/> */}
+          {/* <AmmoCustomSoftGLTF url='./models/bookcaseOpen.glb' position={[2, 4, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/> */}
         </Physics>
       </Suspense>
     </>
