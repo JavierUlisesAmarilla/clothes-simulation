@@ -4,16 +4,19 @@ import {ShapeType, useAmmoPhysicsContext} from 'use-ammojs'
 import {MathUtils, Mesh, MeshStandardMaterial, SphereGeometry} from 'three'
 
 
-export const AmmoCustomBall = () => {
+export const AmmoCustomBall = ({
+  radius = 0.3,
+  position = [0, 0, 0],
+}) => {
   const three = useThree()
   const apc = useAmmoPhysicsContext()
 
   useEffect(() => {
     const sphereMesh = new Mesh(
-        new SphereGeometry(0.5, 50, 50),
+        new SphereGeometry(radius, 64, 64),
         new MeshStandardMaterial({color: 'red'}),
     )
-    sphereMesh.position.setY(2)
+    sphereMesh.position.set(position[0], position[1], position[2])
     three.scene.add(sphereMesh)
     const newUUID = MathUtils.generateUUID()
     apc.addRigidBody(
@@ -26,5 +29,5 @@ export const AmmoCustomBall = () => {
           },
         },
     )
-  }, [apc, three.scene])
+  }, [apc, position, radius, three.scene])
 }

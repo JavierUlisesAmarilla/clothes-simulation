@@ -3,7 +3,7 @@
 import React, {Suspense} from 'react'
 import {OrbitControls} from '@react-three/drei'
 import {Perf} from 'r3f-perf'
-import {Physics} from 'use-ammojs'
+import {Physics, ShapeType, BodyType} from 'use-ammojs'
 import {AmmoGround} from './AmmoGround'
 import {AmmoBall} from './AmmoBall'
 import {AmmoSoftBall} from './AmmoSoftBall'
@@ -76,20 +76,43 @@ export const AmmoExperience = () => {
         // simulationSpeed={1}
         >
           <AmmoGround/>
-          {/* <AmmoBall/> */}
-          {/* <AmmoSoftBall/> */}
-          {/* <AmmoCustomBall/> */}
-          {/* <AmmoCustomSoftBall/> */}
 
-          <AmmoCustomGLTF url='./Henri/Henri.gltf' position={[0, 0, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/>
+          <AmmoCustomGLTF
+            url='./Henri/Henri_4500vertices.gltf'
+            shapeType={ShapeType.MESH}
+            bodyType={BodyType.STATIC}
+            position={[0, 0, 0]}
+            rotation={[0, 0, 0]}
+            scale={[MODEL_SCALE, MODEL_SCALE, MODEL_SCALE]}
+          />
+          <AmmoCustomSoftGLTF
+            url='./Henri/Tshirt_40poly2.gltf'
+            position={[0, 0, 0]}
+            rotation={[0, 0, 0]}
+            scale={[1, 1, 1]}
+          />
+          <AmmoCustomSoftGLTF
+            url='./Henri/Pant.gltf'
+            position={[0, 0, 0]}
+            rotation={[0, 0, 0]}
+            scale={[1, 1, 1]}
+          />
 
-          {/* <AmmoCustomSoftGLTF url='./Henri/Tshirt_40poly2.gltf' position={[0, 0, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/> */}
+          {/* <AmmoBall position={[0, 1, 0]}/>
+          <AmmoCustomBall position={[0, 2, 0]}/>
+          <AmmoSoftBall position={[0, 3, 0]}/>
+          <AmmoCustomSoftBall position={[0, 4, 0]}/> */}
 
-          {/* Low poly models test */}
-          {/* <AmmoCustomSoftGLTF url='./models/bench.glb' position={[-1, 1, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/> */}
-          {/* <AmmoCustomSoftGLTF url='./models/benchCushion.glb' position={[0, 2, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/> */}
-          {/* <AmmoCustomSoftGLTF url='./models/benchCushionLow.glb' position={[1, 3, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/> */}
-          {/* <AmmoCustomSoftGLTF url='./models/bookcaseOpen.glb' position={[2, 4, 0]} rotation={[0, 0, 0]} scale={[1, 1, 1]}/> */}
+          {/* <AmmoCustomGLTF
+            url='./models/stairs.glb'
+            shapeType={ShapeType.MESH}
+            bodyType={BodyType.STATIC}
+            position={[-1, 1, 0.3]}
+          />
+          <AmmoCustomSoftGLTF
+            url='./models/bench.glb'
+            position={[0, 3, 0]}
+          /> */}
         </Physics>
       </Suspense>
     </>

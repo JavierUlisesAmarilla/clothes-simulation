@@ -9,7 +9,14 @@ import {assertDefined} from '../utils/custom.assert'
 import {customDebug} from '../utils/custom.debug'
 
 
-export const AmmoCustomSoftGLTF = ({url, softBodyOptions, customMaterial, position, rotation, scale}) => {
+export const AmmoCustomSoftGLTF = ({
+  url,
+  softBodyOptions,
+  customMaterial,
+  position,
+  rotation,
+  scale,
+}) => {
   assertDefined(url)
   const gltf = useGLTF(url)
   const three = useThree()

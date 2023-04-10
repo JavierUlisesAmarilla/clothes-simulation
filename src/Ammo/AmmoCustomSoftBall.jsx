@@ -5,16 +5,19 @@ import {MathUtils, Mesh, MeshStandardMaterial, SphereGeometry} from 'three'
 import {DEFAULT_SOFTBODY_OPTIONS} from '../utils/constants'
 
 
-export const AmmoCustomSoftBall = () => {
+export const AmmoCustomSoftBall = ({
+  radius = 0.3,
+  position = [0, 0, 0],
+}) => {
   const three = useThree()
   const apc = useAmmoPhysicsContext()
 
   useEffect(() => {
     const sphereMesh = new Mesh(
-        new SphereGeometry(0.5, 50, 50),
+        new SphereGeometry(radius, 50, 50),
         new MeshStandardMaterial({color: 'red'}),
     )
-    sphereMesh.position.setY(2)
+    sphereMesh.position.set(position[0], position[1], position[2])
     three.scene.add(sphereMesh)
     const newUUID = MathUtils.generateUUID()
     apc.addSoftBody(
@@ -22,5 +25,5 @@ export const AmmoCustomSoftBall = () => {
         sphereMesh,
         DEFAULT_SOFTBODY_OPTIONS,
     )
-  }, [apc, three.scene])
+  }, [apc, position, radius, three.scene])
 }

@@ -7,7 +7,14 @@ import {isVector3Arr} from '../utils/common'
 import {assertDefined} from '../utils/custom.assert'
 
 
-export const AmmoCustomGLTF = ({url, position, rotation, scale}) => {
+export const AmmoCustomGLTF = ({
+  url,
+  shapeType = ShapeType.BOX,
+  bodyType = BodyType.DYNAMIC,
+  position,
+  rotation,
+  scale,
+}) => {
   assertDefined(url)
   const gltf = useGLTF(url)
   const three = useThree()
@@ -31,12 +38,12 @@ export const AmmoCustomGLTF = ({url, position, rotation, scale}) => {
         {
           meshToUse: gltf.scene,
           shapeConfig: {
-            type: ShapeType.MESH,
+            type: shapeType,
           },
         },
         {
-          type: BodyType.STATIC,
+          type: bodyType,
         },
     )
-  }, [apc, gltf.scene, position, rotation, scale, three.scene])
+  }, [apc, bodyType, gltf.scene, position, rotation, scale, shapeType, three.scene])
 }

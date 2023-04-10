@@ -14,7 +14,10 @@ export const RapierGround = () => {
         rotation={[- Math.PI * 0.5, 0, 0]}
         scale={GROUND_SIZE}
       >
-        <meshStandardMaterial color="greenyellow" side={DoubleSide}/>
+        <meshStandardMaterial
+          color="greenyellow"
+          side={DoubleSide}
+        />
       </Plane>
     </RigidBody>
   )

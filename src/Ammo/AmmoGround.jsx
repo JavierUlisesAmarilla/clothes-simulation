@@ -10,12 +10,18 @@ export const AmmoGround = () => {
   const [ref] = useRigidBody(() => ({
     shapeType: ShapeType.BOX,
     mass: 0,
-    position: [0, -1, 0],
+    position: [0, -0.5, 0],
   }))
 
   return (
-    <Box ref={ref} args={[GROUND_SIZE, 1, GROUND_SIZE]}>
-      <meshStandardMaterial color="greenyellow" side={DoubleSide}/>
+    <Box
+      ref={ref}
+      args={[GROUND_SIZE, 1, GROUND_SIZE]}
+    >
+      <meshStandardMaterial
+        color="greenyellow"
+        side={DoubleSide}
+      />
     </Box>
   )
 }

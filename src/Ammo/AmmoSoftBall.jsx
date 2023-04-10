@@ -5,12 +5,22 @@ import {useSoftBody} from 'use-ammojs'
 import {DEFAULT_SOFTBODY_OPTIONS} from '../utils/constants'
 
 
-export const AmmoSoftBall = () => {
+export const AmmoSoftBall = ({
+  radius = 0.3,
+  position = [0, 0, 0],
+}) => {
   const [ref] = useSoftBody(DEFAULT_SOFTBODY_OPTIONS)
 
   return (
-    <Sphere args={[0.5, 64, 64]} ref={ref}>
-      <meshPhysicalMaterial attach="material" color="red"/>
+    <Sphere
+      ref={ref}
+      args={[radius, 64, 64]}
+      position={position}
+    >
+      <meshPhysicalMaterial
+        attach="material"
+        color="red"
+      />
     </Sphere>
   )
 }

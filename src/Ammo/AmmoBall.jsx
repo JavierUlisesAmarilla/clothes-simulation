@@ -4,15 +4,25 @@ import {Sphere} from '@react-three/drei'
 import {ShapeType, useRigidBody} from 'use-ammojs'
 
 
-export const AmmoBall = () => {
+export const AmmoBall = ({
+  radius = 0.3,
+  position = [0, 0, 0],
+}) => {
   const [ref] = useRigidBody(() => ({
     shapeType: ShapeType.SPHERE,
     mass: 1,
   }))
 
   return (
-    <Sphere args={[0.5, 64, 64]} ref={ref}>
-      <meshPhysicalMaterial attach="material" color="red"/>
+    <Sphere
+      ref={ref}
+      args={[radius, 64, 64]}
+      position={position}
+    >
+      <meshPhysicalMaterial
+        attach="material"
+        color="red"
+      />
     </Sphere>
   )
 }
