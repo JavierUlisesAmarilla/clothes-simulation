@@ -78,7 +78,7 @@ export const AmmoExperience = () => {
           <AmmoGround/>
 
           <AmmoCustomGLTF
-            url='./Henri/Henri_4500vertices.gltf'
+            url='./Henri/Henri4500vertices.gltf'
             shapeType={ShapeType.MESH}
             bodyType={BodyType.STATIC}
             position={[0, 0, 0]}
