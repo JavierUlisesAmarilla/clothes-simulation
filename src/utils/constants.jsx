@@ -2,7 +2,7 @@
 import {BodyActivationState, SoftBodyType} from 'use-ammojs'
 
 
-export const MODEL_SCALE = 0.2
+export const MODEL_SCALE = 1
 
 export const GROUND_SIZE = 10
 

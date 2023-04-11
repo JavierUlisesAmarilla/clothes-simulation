@@ -2,9 +2,6 @@
   "name": "threejs-journey-exercise",
   "private": true,
   "version": "0.1.0",
-  "engines": {
-    "node": "16.20.0"
-  },
   "type": "module",
   "scripts": {
     "dev": "vite",

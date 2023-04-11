@@ -77,14 +77,14 @@ export const AmmoExperience = () => {
         >
           <AmmoGround/>
 
-          <AmmoCustomGLTF
-            url='./Henri/Henri4500vertices.gltf'
+          {/* <AmmoCustomGLTF
+            url='./Henri/Jack.gltf'
             shapeType={ShapeType.MESH}
             bodyType={BodyType.STATIC}
             position={[0, 0, 0]}
             rotation={[0, 0, 0]}
             scale={[MODEL_SCALE, MODEL_SCALE, MODEL_SCALE]}
-          />
+          /> */}
           <AmmoCustomSoftGLTF
             url='./Henri/Tshirt_40poly2.gltf'
             position={[0, 0, 0]}
