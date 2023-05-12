@@ -25,7 +25,7 @@ export const RapierExperience = () => {
       />
       <ambientLight intensity={0.5}/>
 
-      <axesHelper args={[5]}/>
+      {/* <axesHelper args={[5]}/> */}
 
       <Suspense>
         <Physics colliders='trimesh'>
